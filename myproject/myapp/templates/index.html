@@ -74,40 +74,15 @@
 				<div class="col-md-5">
 					<ul class="visual-list">
 						<li>
+							{% for item in copy_cont%}
 							<div class="img-holder">
-								<img src="{%static 'images/graph-04.svg'%}" width="110" alt="">
+								<img src="{% static 'images/'|add:item.img %}" width="120" alt="">
 							</div>
 							<div class="text-holder">
-								<h3>Riding Mountain Bike</h3>
-								<p>Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue. </p>
+								<h3>{{item.name}}</h3>
+								<p>{{item.text}}</p>
 							</div>
-						</li>
-						<li>
-							<div class="img-holder">
-								<img class="pull-left" src="{%static 'images/graph-03.svg'%}" width="90" alt="">
-							</div>
-							<div class="text-holder">
-								<h3>Volley Ball Intense Training</h3>
-								<p>Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat. </p>
-							</div>
-						</li>
-						<li>
-							<div class="img-holder">
-								<img src="{%static 'images/graph-02.svg'%}" height="84" alt="">
-							</div>
-							<div class="text-holder">
-								<h3>Learn Surfing From Experts</h3>
-								<p>Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat. </p>
-							</div>
-						</li>
-						<li>
-							<div class="img-holder">
-								<img src="{%static 'images/graph-01.svg'%}" height="71" alt="">
-							</div>
-							<div class="text-holder">
-								<h3>Archers Club</h3>
-								<p>Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat. </p>
-							</div>
+							{%endfor%}
 						</li>
 					</ul>
 				</div>
