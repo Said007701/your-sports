@@ -25,11 +25,19 @@ def start(element):
     copy_money=[
         {"name":"STUDENTS","money":"$","number":"8","month":"per month","text":"Personal License","btn":"purchase","active":True},
         {"name":"PROFESSIONAL","money":"$","number":"19","month":"per month","text":"Personal License Email Support","btn":"purchase","active":True},
+    ]
+    copy_money1=[
         {"name":"AGENCY","money":"$","number":"49","month":"per month","text":"1-12 Team Members Phone Support","btn":"purchase","active":True},
         {"name":"ENTERPRISE","money":"$","number":"79","month":"per month","text":"Unlimited Team Members 24/ 7 Phone Support","btn":"purchase","active":True},
     ]
+    copy_social=[
+        {"name":"fa fa-facebook-f"},
+        {"name":"fa fa-twitter"},
+        {"name":"fa fa-dribbble"},
+        {"name":"fa fa-pinterest"},
+    ]
 
-    copy_fun={"copy_plan":copy_plan,"copy_cont":copy_cont,"copy_tren":copy_tren,"copy_tren1":copy_tren1,"copy_money":copy_money}
+    copy_fun={"copy_plan":copy_plan,"copy_cont":copy_cont,"copy_tren":copy_tren,"copy_tren1":copy_tren1,"copy_money":copy_money,"copy_money1":copy_money1,"copy_social":copy_social}
     return render(element,"index.html",copy_fun)
 
 # Create your views here.

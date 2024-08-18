@@ -120,32 +120,34 @@
 				<h2>Pricing Plans</h2>
 				<div class="pricing-tables">
 					<div class="plan">
+						{%for item in copy_money%}
 		                <div class="head">
-							
-		                    <h3>Students</h3>
+		                    <h3>{{item.name}}</h3>
 		                </div>
 		                <div class="price">
-		                    <span class="price-main"><span class="symbol">$</span>8</span>
-		                    <span class="price-additional">per month</span>
+		                    <span class="price-main"><span class="symbol">{{item.money}}</span>{{item.number}}</span>
+		                    <span class="price-additional">{{item.month}}</span>
 		                </div>
 		                <ul class="item-list">
-		                    <li>Personal License</li>
+		                    <li>{{item.text}}</li>
 		                </ul>
-		                <button type="button" class="btn btn-default rounded">purchase</button>
+		                <button type="button" class="btn btn-default rounded">{{item.btn}}</button>	
+						{%endfor%}
 		            </div>
 		            <div class="plan">
+						{%for item in copy_money1%}
 		                <div class="head">
-		                    <h3>professional</h3> </div>
+		                    <h3>{{item.name}}</h3>
+						</div>
 		                <div class="price">
-		                    <span class="price-main"><span class="symbol">$</span>19</span>
-		                    <span class="price-additional">per month</span>
+		                    <span class="price-main"><span class="symbol">{{item.money}}</span>{{item.number}}</span>
+		                    <span class="price-additional">{{item.month}}</span>
 		                </div>
 		                    <ul class="item-list">
-		                       <li>Professional License</li>
-		                       <li>Email Support</li>
+		                       <li>{{item.text}}</li>
 		                    </ul>
-		                <button type="button" class="btn btn-default rounded">purchase</button>
-						</div>
+		                <button type="button" class="btn btn-default rounded">{{item.btn}}</button>
+							{%endfor%}
 		            </div>
 				</div>
  			</div>
@@ -203,10 +205,9 @@
                     
                     <div class="col-md-6 text-right">
                     	<ul class="social">
-                        	<li><a href="{%static 'javascript:'%}"><i class="fa fa-facebook-f"></i></a></li>
-                            <li><a href="{%static 'javascript:'%}"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="{%static 'javascript:'%}"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="{%static 'javascript:'%}"><i class="fa fa-pinterest"></i></a></li>
+							{%for item in copy_social%}
+                        	<li><a href="{%static 'javascript:'%}"><i class={{item.name}}></i></a></li>
+							{%endfor%}
                         </ul>
                     </div>
                 </div>
