@@ -101,22 +101,17 @@
 				<h2>What Our Clients Say</h2>
 				<ul class="testimonials">
 					<li>
-						<div class="img-holder"><a href="#"><img src="{%static 'images/logo-1.png'%}" height="84" width="124" alt=""></a></div>
-						<p><em>Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis. </em></p>
-					</li>
+						{%for item in copy_tren%}
+						<div class="img-holder"><a href="#"><img src="{% static 'images/'|add:item.img %}" height="84" width="124" alt=""></a></div>
+						<p><em>{{item.text}}</em></p>
+						{%endfor%}
+					</li>		
 					<li>
-						<div class="img-holder"><a href="#"><img src="{%static 'images/logo-2.png'%}" height="90" width="148" alt=""></a></div>
-						<p><em>Donec euismod dolor ut ultricies consequat. Vivamus urna ipsum, rhoncus molestie neque ac, mollis eleifend nibh.</em></p>
-					</li>
-					<li>
-						<div class="img-holder"><a href="#"><img src="{%static 'images/logo-3.png'%}" height="100" width="100" alt=""></a></div>
-						<p><em>In efficitur in velit et tempus. Duis nec odio dapibus, suscipit erat fringilla, imperdiet nibh. Morbi tempus auctor felis ac vehicula. </em></p>
-					</li>
-					
-					<li>
-						<div class="img-holder"><a href="#"><img src="{%static 'images/logo-4.png'%}" height="50" width="108" alt=""></a></div>
-						<p><em>Fusce pharetra erat id odio blandit, nec pharetra eros venenatis. Pellentesque porttitor cursus massa et vestibulum.</em></p>
-					</li>
+						{%for item in copy_tren%}
+						<div class="img-holder"><a href="#"><img src="{% static 'images/'|add:item.img %}" height="84" width="124" alt=""></a></div>
+						<p><em>{{item.text}}</em></p>
+						{%endfor%}
+					</li>			
 				</ul>
 			</div>
 		</div>
@@ -126,6 +121,7 @@
 				<div class="pricing-tables">
 					<div class="plan">
 		                <div class="head">
+							
 		                    <h3>Students</h3>
 		                </div>
 		                <div class="price">
@@ -149,32 +145,7 @@
 		                       <li>Email Support</li>
 		                    </ul>
 		                <button type="button" class="btn btn-default rounded">purchase</button>
-		            </div>
-		            <div class="plan recommended">
-		                <div class="head">
-		                    <h3>agency</h3> </div>
-		                <div class="price">
-		                    <span class="price-main"><span class="symbol">$</span>49</span>
-		                    <span class="price-additional">per month</span>
-		                </div>
-		                    <ul class="item-list">
-		                        <li>1-12 Team Members</li>
-		                        <li>Phone Support</li>
-		                    </ul>
-		                <button type="button" class="btn btn-default rounded">purchase</button>
-		            </div>
-		            <div class="plan">
-		                <div class="head">
-		                    <h3>enterprise</h3> </div>
-		                <div class="price">
-		                    <span class="price-main"><span class="symbol">$</span>79</span>
-		                    <span class="price-additional">per month</span>
-		                </div>
-		                <ul class="item-list">
-		                    <li>Unlimited Team Members</li>
-		                    <li>24/ 7 Phone Support</li>
-		                </ul>
-		                <button type="button" class="btn btn-default rounded">purchase</button>
+						</div>
 		            </div>
 				</div>
  			</div>
